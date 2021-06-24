@@ -21,4 +21,6 @@ public class classAttributePage extends PageObject{
         driver.switchTo().alert().accept();
     }
 
+
+
 }

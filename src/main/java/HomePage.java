@@ -14,6 +14,10 @@ public class HomePage extends PageObject {
     @FindBy(xpath = "//*[@href = '/click']")
     public WebElement LinkClick;
 
+    @FindBy(xpath = "//*[@href = '/hiddenlayers']")
+    public WebElement LinkHiddenLayers;
+
+
 
 
     public HomePage(WebDriver driver) {
@@ -30,7 +34,8 @@ public class HomePage extends PageObject {
     public void openClickPage(){
         this.LinkClick.click();
     }
-    public void openHiddenLayers(){
+    public void openHiddenLayersPage(){
+        this.LinkHiddenLayers.click();
 
     }
 }
