@@ -17,6 +17,9 @@ public class HomePage extends PageObject {
     @FindBy(xpath = "//*[@href = '/hiddenlayers']")
     public WebElement LinkHiddenLayers;
 
+    @FindBy(xpath ="//*[@href = '/clientdelay']")
+    public WebElement LinkClientSideDelay;
+
 
 
 
@@ -36,7 +39,9 @@ public class HomePage extends PageObject {
     }
     public void openHiddenLayersPage(){
         this.LinkHiddenLayers.click();
-
+    }
+    public void openClientSideDelayPage(){
+        this.LinkClientSideDelay.click();
     }
 }
 
