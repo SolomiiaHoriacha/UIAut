@@ -1,8 +1,10 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageObject {
     protected WebDriver driver;
+    protected WebElement alertSuccess;
 
     public PageObject(WebDriver driver) {
         this.driver = driver;

@@ -20,6 +20,9 @@ public class HomePage extends PageObject {
     @FindBy(xpath ="//*[@href = '/clientdelay']")
     public WebElement LinkClientSideDelay;
 
+    @FindBy(xpath = "//*[@href='/sampleapp']")
+    public WebElement LinkSampleApp;
+
 
 
 
@@ -42,6 +45,9 @@ public class HomePage extends PageObject {
     }
     public void openClientSideDelayPage(){
         this.LinkClientSideDelay.click();
+    }
+    public void openSampleAppPage(){
+        this.LinkSampleApp.click();
     }
 }
 
