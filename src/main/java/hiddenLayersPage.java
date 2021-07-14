@@ -13,6 +13,7 @@ public class hiddenLayersPage extends PageObject{
         @FindBy(xpath = "//*[@class='btn btn-primary']")
         public WebElement blueButton;
 
+
     public void doubleClickGreenButton() {
         Actions action = new Actions(driver);
         action.doubleClick();

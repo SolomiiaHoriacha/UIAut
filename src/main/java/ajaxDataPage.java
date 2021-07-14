@@ -2,46 +2,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class clientSideDelayPage extends PageObject {
+public class ajaxDataPage extends PageObject{
 
 
-
-    public clientSideDelayPage(WebDriver driver) {
+    public ajaxDataPage(WebDriver driver){
         super(driver);
     }
-    @FindBy(xpath ="//*[@class = 'btn btn-primary']")
+
+
+    @FindBy(id = "ajaxButton")
     public WebElement ajaxButton;
 
     @FindBy(xpath = "//*[@class ='bg-success']")
-    public WebElement fieldText;
-
+    public WebElement ajaxField;
 
 
     public void clickOnAjaxButton() {
         this.ajaxButton.click();
     }
 
-    public String getFieldText() {
-        return fieldText.getText();
+    public String getAjaxFieldText() {
+        return ajaxField.getText();
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

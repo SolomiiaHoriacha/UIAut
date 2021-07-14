@@ -20,7 +20,7 @@ public class classAttributeTest  {
         driver.close();
     }
     @Test
-    public void ClassAttributeTest() {
+    public void classAttributeTest() {
     HomePage homePage = new HomePage(driver);
     classAttributePage classAttributePage = new classAttributePage(driver);
     driver.get(Utils.BASE_URL);
@@ -29,4 +29,5 @@ public class classAttributeTest  {
     classAttributePage.clickAlertOKButton();
 
     }
+
 }

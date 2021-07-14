@@ -23,7 +23,7 @@ public class sampleAppTest {
     }
 
     @Test
-    public void SampleAppTest() {
+    public void sampleAppTest() {
         HomePage homePage = new HomePage(driver);
         sampleAppPage sampleAppPage = new sampleAppPage(driver);
         driver.get(Utils.BASE_URL);
@@ -31,8 +31,8 @@ public class sampleAppTest {
         sampleAppPage.enterUserName();
         sampleAppPage.enterPassword();
         sampleAppPage.pressLoginButton();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //Assert.assertEquals(sampleAppPage.getLoginStatus(), "Welcome, User Name!");
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Assert.assertEquals(sampleAppPage.getLoginStatus(), "Welcome, User name!");
 
 
 

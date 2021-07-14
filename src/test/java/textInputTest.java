@@ -1,11 +1,13 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class hiddenLayersTest {
+import java.util.concurrent.TimeUnit;
 
+public class textInputTest {
 
     private static final WebDriver driver = new ChromeDriver();
 
@@ -20,39 +22,16 @@ public class hiddenLayersTest {
         driver.manage().deleteAllCookies();
         driver.close();
     }
-
-
     @Test
-    public void hiddenLayersTest () {
+    public void textInputTest() {
         HomePage homePage = new HomePage(driver);
-        hiddenLayersPage hiddenLayersPage = new hiddenLayersPage(driver);
+        textInputPage textInputPage = new textInputPage(driver);
         driver.get(Utils.BASE_URL);
-        homePage.openHiddenLayersPage();
-        hiddenLayersPage.doubleClickGreenButton();
+        homePage.openTextInputPage();
+        textInputPage.enterNewButtonName();
+        textInputPage.pressNewButton();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        Assert.assertEquals(textInputPage.getNewButtonName(),"New Button Name");
 
-        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

@@ -1,11 +1,13 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class hiddenLayersTest {
+import java.util.concurrent.TimeUnit;
 
+public class mouseOverTest {
 
     private static final WebDriver driver = new ChromeDriver();
 
@@ -22,15 +24,16 @@ public class hiddenLayersTest {
     }
 
 
-    @Test
-    public void hiddenLayersTest () {
-        HomePage homePage = new HomePage(driver);
-        hiddenLayersPage hiddenLayersPage = new hiddenLayersPage(driver);
-        driver.get(Utils.BASE_URL);
-        homePage.openHiddenLayersPage();
-        hiddenLayersPage.doubleClickGreenButton();
 
-        }
+    @Test
+    public void mouseOverTest () {
+        HomePage homePage = new HomePage(driver);
+        mouseOverPage mouseOverPage = new mouseOverPage(driver);
+        driver.get(Utils.BASE_URL);
+        homePage.openMouseOverPage();
+        mouseOverPage.doubleClickButton();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        Assert.assertEquals(mouseOverPage.getCount(),"2");
     }
 
 
@@ -56,3 +59,6 @@ public class hiddenLayersTest {
 
 
 
+
+
+}

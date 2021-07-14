@@ -19,7 +19,7 @@ public class clickTest {
     }
 
     @Test
-    public void ClassAttributeTest() {
+    public void clickTest() {
         HomePage homePage = new HomePage(driver);
         clickPage clickPage = new clickPage(driver);
         driver.get(Utils.BASE_URL);

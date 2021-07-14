@@ -31,8 +31,8 @@ public class clientSideDelayTest {
         driver.get(Utils.BASE_URL);
         homePage.openClientSideDelayPage();
         clientSideDelayPage.clickOnAjaxButton();
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        //Assert.assertEquals(clientSideDelayPage.getFieldText(), "Data calculated on the client side.");
+        driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+        Assert.assertEquals(clientSideDelayPage.getFieldText(), "Data calculated on the client side.");
     }
 
 
