@@ -9,17 +9,17 @@ public class dynamicIDTest {
 
     @BeforeTest
     public static void main(String[] args) {
-        // ChromeDriver location set up in Utils class
+      
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
     @Test
     public static void findElementDynamicID(){
-        driver.get(Utils.BASE_URL);    //переходимо на хоум пейдж
-        HomePage HomePage = new HomePage(driver);  //створюємо екземпляр хоум пейдж
-        HomePage.clickLinkDynamicID();  //клікаємо на динам ід лінк
-        dynamicIDPage dynamicIDPage = new dynamicIDPage(driver); //створюємо екзимпляр динамік ід пейдж
-        dynamicIDPage.clickWithDynamicID();// клікаємо на кнопку
+        driver.get(Utils.BASE_URL);    
+        HomePage HomePage = new HomePage(driver); 
+        HomePage.clickLinkDynamicID();  
+        dynamicIDPage dynamicIDPage = new dynamicIDPage(driver);
+        dynamicIDPage.clickWithDynamicID();
     }
 
     @AfterTest
